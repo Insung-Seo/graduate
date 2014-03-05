@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>졸업프로젝트</title>
+<link href="css/default2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="script/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="script/jquery.scrollTo-1.4.3.1.js"></script>
+<script type="text/javascript">
+	function pageScroll(obj) {
+		var speed = 700;
+
+		//  전달받은 매개변수가 없을시에
+		if (!obj) {
+			//   윈도우 스크롤을 조절
+			$.scrollTo({
+				top : 0,
+				left : 0
+			}, speed);
+		}
+		//  전달받은 매개변수가 있을시에
+		else {
+			//   offset()으로 요소의 위치를 구하고 내비게이션의 높이를 빼준다.
+			var topPos = $(obj).offset().top - 147;
+			$.scrollTo({
+				top : topPos,
+				left : 0
+			}, speed);
+		}
+	}
+
+	$(function() {
+		$("ul li a").click(function() {
+			var goPage = $(this).attr("href");
+			pageScroll(goPage);
+			//   <a>태그의 href로 이동하는것을 막기 위하여
+			return false;
+		});
+	});
+
+	//  each 함수로 한번에 설정하는 부분
+	$("li a").each(function(index, element) {
+
+		//  attr()함수로 이미지 url을 구한다.
+		var bgimg = $(this).attr("data-img");
+
+		//  배경 이미지 설정
+		$(this).css("background-image", "url(" + bgimg + ")");
+	});
+
+	$("li a").hover(
+	//   마우스 오버시 0.2초동안 marginLeft,height값이 변경
+	function() {
+		$(this).stop().animate({
+			marginLeft : "15px",
+			height : 120
+		}, 200);
+	},
+	//  마우스 아웃시 0.2초동안 marginLeft,height값이 변경
+	function() {
+		$(this).stop().animate({
+			marginLeft : "0px",
+			height : 30
+		}, 200);
+	});
+</script>
+</head>
+<body>
+	<div id="wrapper">
+
+		<!-- header -->
+		<header>
+			<div id="logo">
+				<img src="images/logo.gif" width="265" height="62" alt="Fun Web">
+
+			</div>
+			<div id="join">
+				<img src="images/logo.gif" width="265" height="62" alt="Fun Web">
+			</div>
+			<div class="clear"></div>
+			<nav>
+				<ul>
+					<li><a href="#main">main</a></li>
+					<li><a href="#photo">photo</a></li>
+					<li><a href="#calendar">calendar</a></li>
+					<li><a href="#checkin">checkin</a></li>
+				</ul>
+			</nav>
+
+
+		</header>
+		<!-- header -->
+		<div class="clear"></div>
+		<article>
+			<div id="content">
+				<div id="main">
+					<iframe src="main.html" width="1024px" height="800px"
+						frameborder="0"></iframe>
+				</div>
+				<div id="photo">
+					<iframe src="photo.html" width="1024px" height="800px"
+						frameborder="0"></iframe>
+				</div>
+				<div id="calendar">
+					<iframe src="calendar.html" width="1024px" height="800px"
+						frameborder="0"></iframe>
+				</div>
+				<div id="checkin">
+					<iframe src="checkin.html" width="1024px" height="800px"
+						frameborder="0"></iframe>
+				</div>
+			</div>
+
+			<!-- main_img -->
+
+			<div class="clear"></div>
+			<div id="main_img">
+				<img src="images/main_img1.jpg" width="1024" height="282">
+			</div>
+			<!-- main_img -->
+
+			<!-- login -->
+			<div id="login">
+				<form id="login">
+					<table>
+						<tr>
+							<td>ID</td>
+							<td><input type="text" id="id"></td>
+							<td>Password</td>
+							<td><input type="password" id="password"></td>
+							<td><input type="submit" value="login"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</article>
+		<!-- login -->
+
+		<!-- footer -->
+		<footer> f </footer>
+
+		<!-- footer -->
+	</div>
+
+</body>
+</html>

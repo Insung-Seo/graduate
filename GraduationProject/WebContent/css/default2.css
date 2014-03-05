@@ -1,0 +1,121 @@
+#wrapper {
+	width: 1024px; /* �� �� ������ ũ�⿡ �°� ������ ���� */
+	text-align: left;
+	margin: 0;
+	margin-right: auto;
+	margin-left: auto;
+	min-height: 900px;
+}
+
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
+	line-height: 1.2em;
+	color: #333;
+}
+
+.clear {
+	clear: both;
+}
+
+header {
+	position: fixed;
+	height: 150px;
+	width: 1024px;
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+
+#logo {
+	float: left;
+	width: 300px;
+	margin: 40px 0 0 40px;
+}
+
+#join {
+	float: right;
+	width: 300px;
+	margin: 40px 40px 0 0;
+}
+
+#main_img {
+	border: solid 1px #ccc;
+}
+
+#login {
+	
+}
+
+footer {
+	border: solid 1px #ccc;
+}
+
+#login table {
+	margin: auto;
+	height: 60px;
+	border-collapse: collapse;
+	height: 60px;
+}
+
+#login td {
+	font-family: seo;
+	font-size: 14px;
+	padding-right: 20px;
+}
+
+nav {
+	height: 30px;
+}
+
+nav ul {
+	list-style: none;
+	float: right;
+}
+
+nav li {
+	display: inline;
+	padding: 20px;
+}
+
+nav li a {
+	text-decoration: none;
+	color: #000000;
+}
+
+nav li a:HOVER {
+	color: #f8f8ff;
+}
+
+#content {
+	width: 1024px;
+	padding-top: 150px;
+}
+
+#main {
+	background: #ffe4e1;
+	height: 800px;
+}
+
+#photo {
+	background: #ffe4b5;
+	height: 800px;
+}
+
+#calendar {
+	background: #e0ffff;
+	height: 800px;
+}
+
+#checkin {
+	background: #7fff00;
+	height: 800px;
+}
+
+@font-face {
+	font-family: "seo";
+	src: url("../images/seguisym.eot");
+	src: url("../images/seguisym.ttf") format("truetype");
+}
